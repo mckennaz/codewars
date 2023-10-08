@@ -1,13 +1,12 @@
-// Given two strings comprised of + and -, return a new string which shows how the two strings interact in the following way:
+// Wilson primes satisfy the following condition. Let P represent a prime number.
 
-// When positives and positives interact, they remain positive.
-// When negatives and negatives interact, they remain negative.
-// But when negatives and positives interact, they become neutral, and are shown as the number 0.
+// Then,
 
-function neutralise(s1, s2) {
-  let res = "";
-  for(let i = 0; i < s1.length; i++) {
-    res += s1[i] !== s2[i]? "0": s1[i];
-  }
-  return res;
+// ((P-1)! + 1) / (P * P)
+// should give a whole number.
+
+// Your task is to create a function that returns true if the given number is a Wilson prime.
+
+function amIWilson(p) {
+  return p === 5 || p === 13 || p === 563
 }
